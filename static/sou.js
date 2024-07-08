@@ -41,7 +41,7 @@ $(function() {
         var keywords = $(this).val();
         if (keywords == '') { $('#word').hide(); return };
         $.ajax({
-            url: current == 'bing' ? 'https://api.bing.com/osjson.aspx?query=' + keywords : 'https://suggestqueries.google.com/complete/search?client=firefox&hl=zh&q=' + keywords,
+            url: 'https://suggestqueries.google.com/complete/search?client=firefox&hl=zh&q=' + keywords,
             dataType: 'jsonp',
             jsonp: 'cb',
             beforeSend: function() { },
