@@ -35,32 +35,34 @@ $(document).ready(function() {
         }
     })
 });
+
 $(function() {
     $('.wd').keyup(function() {
         var keywords = $(this).val();
         if (keywords == '') { $('#word').hide(); return };
         $.ajax({
-            url: 'https://suggestion.baidu.com/su?wd=' + keywords,
+            url: current == 'bing' ? 'https://api.bing.com/osjson.aspx?query=' + keywords : 'https://suggestqueries.google.com/complete/search?client=firefox&hl=zh&q=' + keywords,
             dataType: 'jsonp',
             jsonp: 'cb',
             beforeSend: function() { },
             success: function(data) {
                 $('#word').empty().show();
-                if (data.s == '') { $('#word').hide(); }
-                $.each(data.s, function() {
-                    $('#word').append('<li><svg class="icon" style=" width: 15px; height: 15px; opacity: 0.5;" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg> ' + this + '</li>');
-                })
+                if (data[1].length == 0) { $('#word').hide(); }
+                $.each(data[1], function(index, suggestion) {
+                    $('#word').append('<li><svg class="icon" style=" width: 15px; height: 15px; opacity: 0.5;" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg> ' + suggestion + '</li>');
+                });
             },
             error: function() {
                 $('#word').empty().show();
                 $('#word').hide();
             }
-        })
+        });
     });
+
     $(document).on('click', '#word li', function() {
         var word = $(this).text();
         $('.wd').val(word);
         $('#word').hide();
         $("form").submit();
-    })
-})
+    });
+});
