@@ -29,8 +29,17 @@ $(document).ready(function() {
         } else if(current == 'andi') {
             $lg.removeClass('andi').addClass('mita');
             current = 'mita';
+        } else if(current == 'mita') {
+            $lg.removeClass('mita').addClass('perplexity');
+            current = 'perplexity';
+        } else if(current == 'perplexity') {
+            $lg.removeClass('perplexity').addClass('genspark');
+            current = 'genspark';
+        } else if(current == 'genspark') {
+            $lg.removeClass('genspark').addClass('datong');
+            current = 'datong';
         } else {
-            $lg.removeClass('mita').addClass('bing');
+            $lg.removeClass('datong').addClass('bing');
             current = 'bing';
         }
         localStorage.setItem("5iux-sou-search",current);
@@ -47,8 +56,17 @@ $(document).ready(function() {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
         } else if(current == 'andi') {
             window.open('https://andisearch.com/?query=' + searchTerm);
-        } else {
+        } else if(current == 'mita') {
             window.open('https://metaso.cn/?q=' + searchTerm);
+        }
+        } else if(current == 'perplexity') {
+            window.open('https://www.perplexity.ai/search?s=o&q=' + searchTerm);
+        }
+        } else if(current == 'genspark') {
+            window.open('https://www.genspark.ai/search?query=' + searchTerm);
+        }
+        } else {
+            window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
         }
     })
 });
