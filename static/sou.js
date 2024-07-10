@@ -30,8 +30,8 @@ $(document).ready(function() {
             $lg.removeClass('andi').addClass('mita');
             current = 'mita';
         } else if(current == 'mita') {
-            $lg.removeClass('mita').addClass('genspark');
-            current = 'genspark';
+            $lg.removeClass('mita').addClass('bing');
+            current = 'bing';
         localStorage.setItem("5iux-sou-search",current);
     });
 
