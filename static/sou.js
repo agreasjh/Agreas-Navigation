@@ -64,7 +64,6 @@ $(document).ready(function() {
         }
         } else if(current == 'genspark') {
             window.open('https://www.genspark.ai/search?query=' + searchTerm);
-        }
         } else {
             window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
         }
