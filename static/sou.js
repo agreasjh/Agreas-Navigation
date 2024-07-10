@@ -29,9 +29,10 @@ $(document).ready(function() {
         } else if(current == 'andi') {
             $lg.removeClass('andi').addClass('mita');
             current = 'mita';
-        } else {
+        } else if(current == 'mita') {
             $lg.removeClass('mita').addClass('bing');
             current = 'bing';
+        }
         localStorage.setItem("5iux-sou-search",current);
     });
 
@@ -46,8 +47,9 @@ $(document).ready(function() {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
         } else if(current == 'andi') {
             window.open('https://andisearch.com/?query=' + searchTerm);
-        } else {
+        } else if(current == 'mita') {
             window.open('https://metaso.cn/?q=' + searchTerm);
+        }
     })
 });
 
