@@ -29,7 +29,7 @@ $(document).ready(function() {
         } else if(current == 'andi') {
             $lg.removeClass('andi').addClass('mita');
             current = 'mita';
-        } else if(current == 'mita') {
+        } else {
             $lg.removeClass('mita').addClass('bing');
             current = 'bing';
         }
@@ -47,7 +47,7 @@ $(document).ready(function() {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
         } else if(current == 'andi') {
             window.open('https://andisearch.com/?query=' + searchTerm);
-        } else if(current == 'mita') {
+        } else {
             window.open('https://metaso.cn/?q=' + searchTerm);
         }
     })
