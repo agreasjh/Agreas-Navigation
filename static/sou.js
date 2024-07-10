@@ -26,8 +26,11 @@ $(document).ready(function() {
         } else if(current == 'fastgpt') {
             $lg.removeClass('fastgpt').addClass('andi');
             current = 'andi';
+        } else if(current == 'andi') {
+            $lg.removeClass('andi').addClass('mita');
+            current = 'mita';
         } else {
-            $lg.removeClass('andi').addClass('bing');
+            $lg.removeClass('mita').addClass('bing');
             current = 'bing';
         }
         localStorage.setItem("5iux-sou-search",current);
@@ -42,8 +45,10 @@ $(document).ready(function() {
             window.open('https://www.google.com/search?hl=zh&q=' + searchTerm);
         } else if(current == 'fastgpt') {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
-        } else {
+        } else if(current == 'andi') {
             window.open('https://andisearch.com/?query=' + searchTerm);
+        } else {
+            window.open('https://metaso.cn/?q=' + searchTerm);
         }
     })
 });
