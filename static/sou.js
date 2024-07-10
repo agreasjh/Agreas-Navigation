@@ -23,6 +23,9 @@ $(document).ready(function() {
         } else if(current == 'google') {
             $lg.removeClass('google').addClass('andi');
             current = 'andi';
+        } else if(current == 'fastgpt') {
+            $lg.removeClass('fastgpt').addClass('andi');
+            current = 'andi';
         } else {
             $lg.removeClass('andi').addClass('bing');
             current = 'bing';
@@ -37,6 +40,8 @@ $(document).ready(function() {
             window.open('https://www.bing.com/search?q=' + searchTerm);
         } else if(current == 'google') {
             window.open('https://www.google.com/search?hl=zh&q=' + searchTerm);
+        } else if(current == 'fastgpt') {
+            window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
         } else {
             window.open('https://andisearch.com/?query=' + searchTerm);
         }
