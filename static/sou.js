@@ -32,7 +32,7 @@ $(document).ready(function() {
         } else if(current == 'mita') {
             $lg.removeClass('mita').addClass('perplexity');
             current = 'perplexity';
-        } else {
+        } else if(current == 'perplexity') {
             $lg.removeClass('perplexity').addClass('bing');
             current = 'bing';
         }
@@ -52,7 +52,7 @@ $(document).ready(function() {
             window.open('https://andisearch.com/?query=' + searchTerm);
         } else if(current == 'mita') {
             window.open('https://metaso.cn/?q=' + searchTerm);
-        } else {
+        } else if(current == 'perplexity') {
             window.open('https://www.perplexity.ai/search?s=o&q=' + searchTerm);
         }
     })
