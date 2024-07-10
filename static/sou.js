@@ -58,10 +58,8 @@ $(document).ready(function() {
             window.open('https://andisearch.com/?query=' + searchTerm);
         } else if(current == 'mita') {
             window.open('https://metaso.cn/?q=' + searchTerm);
-        }
         } else if(current == 'perplexity') {
             window.open('https://www.perplexity.ai/search?s=o&q=' + searchTerm);
-        }
         } else if(current == 'genspark') {
             window.open('https://www.genspark.ai/search?query=' + searchTerm);
         } else {
