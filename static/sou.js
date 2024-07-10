@@ -27,7 +27,10 @@ $(document).ready(function() {
             $lg.removeClass('andi').addClass('fastgpt');
             current = 'fastgpt';
         } else if(current == 'fastgpt') {
-            $lg.removeClass('fastgpt').addClass('mita');
+            $lg.removeClass('fastgpt').addClass('datong');
+            current = 'datong';
+        } else if(current == 'datong') {
+            $lg.removeClass('datong').addClass('mita');
             current = 'mita';
         } else {
             $lg.removeClass('mita').addClass('bing');
@@ -47,6 +50,8 @@ $(document).ready(function() {
             window.open('https://andisearch.com/?query=' + searchTerm);
         } else if(current == 'fastgpt') {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
+        } else if(current == 'datong') {
+            window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
         } else {
             window.open('https://metaso.cn/?q=' + searchTerm);
         }
