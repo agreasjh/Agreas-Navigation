@@ -21,8 +21,8 @@ $(document).ready(function() {
             $lg.removeClass('bing').addClass('google');
             current = 'google';
         } else if(current == 'google') {
-            $lg.removeClass('google').addClass('andi');
-            current = 'andi';
+            $lg.removeClass('google').addClass('fastgpt');
+            current = 'fastgpt';
         } else if(current == 'fastgpt') {
             $lg.removeClass('fastgpt').addClass('andi');
             current = 'andi';
