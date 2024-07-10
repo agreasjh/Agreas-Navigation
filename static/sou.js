@@ -30,7 +30,10 @@ $(document).ready(function() {
             $lg.removeClass('fastgpt').addClass('datong');
             current = 'datong';
         } else if(current == 'datong') {
-            $lg.removeClass('datong').addClass('mita');
+            $lg.removeClass('datong').addClass('genspark');
+            current = 'genspark';
+        } else if(current == 'genspark') {
+            $lg.removeClass('genspark').addClass('mita');
             current = 'mita';
         } else {
             $lg.removeClass('mita').addClass('bing');
@@ -52,6 +55,8 @@ $(document).ready(function() {
             window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
         } else if(current == 'datong') {
             window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
+        } else if(current == 'genspark') {
+            window.open('https://www.genspark.ai/search?query=' + searchTerm); 
         } else {
             window.open('https://metaso.cn/?q=' + searchTerm);
         }
