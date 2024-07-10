@@ -26,9 +26,6 @@ $(document).ready(function() {
         } else if(current == 'fastgpt') {
             $lg.removeClass('fastgpt').addClass('andi');
             current = 'andi';
-        } else if(current == 'andi') {
-            $lg.removeClass('andi').addClass('mita');
-            current = 'mita';
         } else {
             $lg.removeClass('andi').addClass('bing');
             current = 'bing';
