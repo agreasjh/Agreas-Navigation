@@ -33,7 +33,10 @@ $(document).ready(function() {
             $lg.removeClass('datong').addClass('genspark');
             current = 'genspark';
         } else if(current == 'genspark') {
-            $lg.removeClass('genspark').addClass('mita');
+            $lg.removeClass('genspark').addClass('perplexity');
+            current = 'perplexity';
+        } else if(current == 'perplexity') {
+            $lg.removeClass('perplexity').addClass('mita');
             current = 'mita';
         } else {
             $lg.removeClass('mita').addClass('bing');
@@ -57,6 +60,8 @@ $(document).ready(function() {
             window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
         } else if(current == 'genspark') {
             window.open('https://www.genspark.ai/search?query=' + searchTerm); 
+        } else if(current == 'perplexity') {
+            window.open('https://www.perplexity.ai/search?s=o&q=' + searchTerm);  
         } else {
             window.open('https://metaso.cn/?q=' + searchTerm);
         }
