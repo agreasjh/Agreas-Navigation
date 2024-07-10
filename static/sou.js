@@ -12,7 +12,7 @@ $(document).ready(function() {
         $(".mywth").removeClass('hidden');
         $('#word').hide();
     });
-    var current = localStorage.getItem("5iux-sou-search") || "bing";
+    var current = localStorage.getItem("5iux-sou-search") || "bing";   // 设置默认搜索引擎
     $lg = $(".lg");
     $lg.addClass(current);
     $lg.click(function() {
