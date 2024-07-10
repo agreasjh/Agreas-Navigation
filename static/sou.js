@@ -32,13 +32,6 @@ $(document).ready(function() {
         } else if(current == 'mita') {
             $lg.removeClass('mita').addClass('genspark');
             current = 'genspark';
-        } else if(current == 'genspark') {
-            $lg.removeClass('genspark').addClass('datong');
-            current = 'datong';
-        } else if(current == 'datong') {
-            $lg.removeClass('datong').addClass('bing');
-            current = 'bing';
-        }
         localStorage.setItem("5iux-sou-search",current);
     });
 
@@ -55,11 +48,6 @@ $(document).ready(function() {
             window.open('https://andisearch.com/?query=' + searchTerm);
         } else if(current == 'mita') {
             window.open('https://metaso.cn/?q=' + searchTerm);
-        } else if(current == 'genspark') {
-            window.open('https://www.genspark.ai/search?query=' + searchTerm);
-        } else if(current == 'datong') {
-            window.open('https://datong.io/ui/search.html?search_lang=en&target_lang=zh&q=' + searchTerm);
-        }
     })
 });
 
