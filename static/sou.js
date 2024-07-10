@@ -21,13 +21,13 @@ $(document).ready(function() {
             $lg.removeClass('bing').addClass('google');
             current = 'google';
         } else if(current == 'google') {
-            $lg.removeClass('google').addClass('fastgpt');
-            current = 'fastgpt';
-        } else if(current == 'fastgpt') {
-            $lg.removeClass('fastgpt').addClass('andi');
+            $lg.removeClass('google').addClass('andi');
             current = 'andi';
         } else if(current == 'andi') {
-            $lg.removeClass('andi').addClass('mita');
+            $lg.removeClass('andi').addClass('fastgpt');
+            current = 'fastgpt';
+        } else if(current == 'fastgpt') {
+            $lg.removeClass('fastgpt').addClass('mita');
             current = 'mita';
         } else {
             $lg.removeClass('mita').addClass('bing');
