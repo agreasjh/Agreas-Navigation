@@ -21,7 +21,13 @@ $(document).ready(function() {
             $lg.removeClass('bing').addClass('google');
             current = 'google';
         } else if(current == 'google') {
-            $lg.removeClass('google').addClass('andi');
+            $lg.removeClass('google').addClass('fastgpt');
+            current = 'fastgpt';
+        } else if(current == 'fastgpt') {
+            $lg.removeClass('fastgpt').addClass('mita');
+            current = 'mita';
+        } else if(current == 'mita') {
+            $lg.removeClass('mita').addClass('andi');
             current = 'andi';
         } else {
             $lg.removeClass('andi').addClass('bing');
@@ -37,6 +43,10 @@ $(document).ready(function() {
             window.open('https://www.bing.com/search?q=' + searchTerm);
         } else if(current == 'google') {
             window.open('https://www.google.com/search?hl=zh&q=' + searchTerm);
+        } else if(current == 'fastgpt') {
+            window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
+        } else if(current == 'mita') {
+            window.open('https://metaso.cn/?q=' + searchTerm);
         } else {
             window.open('https://andisearch.com/?query=' + searchTerm);
         }
