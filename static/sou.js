@@ -21,16 +21,10 @@ $(document).ready(function() {
             $lg.removeClass('bing').addClass('google');
             current = 'google';
         } else if(current == 'google') {
-            $lg.removeClass('google').addClass('fastgpt');
-            current = 'fastgpt';
-        } else if(current == 'fastgpt') {
-            $lg.removeClass('fastgpt').addClass('andi');
+            $lg.removeClass('google').addClass('andi');
             current = 'andi';
-        } else if(current == 'andi') {
-            $lg.removeClass('andi').addClass('mita');
-            current = 'mita';
         } else {
-            $lg.removeClass('mita').addClass('bing');
+            $lg.removeClass('andi').addClass('bing');
             current = 'bing';
         }
         localStorage.setItem("5iux-sou-search",current);
@@ -43,12 +37,8 @@ $(document).ready(function() {
             window.open('https://www.bing.com/search?q=' + searchTerm);
         } else if(current == 'google') {
             window.open('https://www.google.com/search?hl=zh&q=' + searchTerm);
-        } else if(current == 'fastgpt') {
-            window.open('https://kagi.com/fastgpt?query=' + searchTerm); 
-        } else if(current == 'andi') {
-            window.open('https://andisearch.com/?query=' + searchTerm);
         } else {
-            window.open('https://metaso.cn/?q=' + searchTerm);
+            window.open('https://andisearch.com/?query=' + searchTerm);
         }
     })
 });
