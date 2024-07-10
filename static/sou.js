@@ -15,25 +15,35 @@ $(document).ready(function() {
     var current = localStorage.getItem("5iux-sou-search") || "bing";   // 设置默认搜索引擎
     $lg = $(".lg");
     $lg.addClass(current);
+    /*
+    切换
+    搜索引擎
+    */
     $lg.click(function() {
-        if(current == 'bing'){
+        if (current == 'bing') {
             $lg.removeClass('bing').addClass('google');
             current = 'google';
-        }else{
-            $lg.removeClass('google').addClass('bing');
+        }else if (current == 'google') {
+            $lg.removeClass('google').addClass('andi');
+            current = 'andi';
+        } else {
+            $lg.removeClass('andi').addClass('bing');
             current = 'bing';
         }
-        localStorage.setItem("5iux-sou-search",current);
+        localStorage.setItem("5iux-sou-search", current);
     });
+    
+    // 给搜索引擎加URL链接
     $('#search').submit(function(event) {
-        event.preventDefault();
-        const searchTerm = $('.wd').val();
-        if(current == 'bing'){
-            window.open('https://www.bing.com/search?q=' + searchTerm);
-        }else{
-            window.open('https://www.google.com/search?hl=zh&q=' + searchTerm)
-        }
-    })
+    event.preventDefault();
+    const searchTerm = $('.wd').val();
+    if(current == 'bing'){
+        window.open('https://www.bing.com/search?q=' + searchTerm);
+    } else if(current == 'google') {
+        window.open('https://www.google.com/search?hl=zh&q=' + searchTerm);
+    } else {
+        window.open('https://andisearch.com/?query=' + searchTerm);
+    }
 });
 
 $(function() {
